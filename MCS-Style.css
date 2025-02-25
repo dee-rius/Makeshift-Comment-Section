@@ -11,15 +11,12 @@
 
 html{
   font-family: Arial;
-  
-  
 }
 
 #everything-container{
   margin: 5vh auto 5vh auto;
   
   animation-name: entrance;
-  animation-delay: 0.3s;
   animation-duration: 0.3s;
   animation-direction: normal;
 }
@@ -28,6 +25,10 @@ fieldset{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: gray;
 }
 
 input[type="text"]{
@@ -67,3 +68,9 @@ button:active{
   box-shadow: inset 3px 3px 3px rgba(0,0,0,0.2);
 }
 
+article{
+  padding: 0px 20px;
+  border-bottom-style: solid;
+  border-bottom-color: gray;
+  border-bottom-width: 1px;
+}

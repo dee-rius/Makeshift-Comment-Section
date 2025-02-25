@@ -1,8 +1,9 @@
 const userName = document.getElementById("username-input");
 const userComment = document.getElementById("user-comment-textarea");
-const commentsArea = document.getElementById("comments-area");
 
 const confirmButton = document.getElementById("confirm-button");
+
+const everythingContainer = document.getElementById("everything-container");
 
 confirmButton.addEventListener("click", addComment);
 
@@ -11,25 +12,25 @@ function addComment()
   if (userName.value != "" && userComment.value != "") 
   {
     console.log(userName.value);
-  console.log(userComment.value);
+    console.log(userComment.value);
   
-  const commentContainer = document.createElement("section");
+    const commentContainer = document.createElement("article");
   
-  const usernameForComment = document.createElement("p");
+    const usernameForComment = document.createElement("p");
   
-  usernameForComment.textContent = "@" + userName.value;
+    usernameForComment.textContent = "@" + userName.value;
   
-  commentContainer.appendChild(usernameForComment);
+    commentContainer.appendChild(usernameForComment);
   
-  const newComment = document.createElement("p");
+    const newComment = document.createElement("p");
   
-  newComment.textContent = userComment.value;
+    newComment.textContent = userComment.value;
   
-  commentContainer.appendChild(newComment);
+    commentContainer.appendChild(newComment);
   
-  document.body.appendChild(commentContainer);
+    everythingContainer.appendChild(commentContainer);
   
-  userName.value = "";
-  userComment.value = "";
+    userName.value = "";
+    userComment.value = "";
   }
  }
