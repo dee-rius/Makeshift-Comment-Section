@@ -7,6 +7,10 @@ const everythingContainer = document.getElementById("everything-container");
 
 confirmButton.addEventListener("click", addComment);
 
+
+const maxCommentWidth = document.querySelector("fieldset").clientWidth;
+console.log(maxCommentWidth);
+
 function addComment()
 {
   if (userName.value != "" && userComment.value != "") 
@@ -32,5 +36,9 @@ function addComment()
   
     userName.value = "";
     userComment.value = "";
+    
+    newComment.style.maxWidth = String(maxCommentWidth) + "px";
+    usernameForComment.style.maxWidth = String(maxCommentWidth) + "px";
+    console.log(newComment.style.maxWidth);
   }
  }

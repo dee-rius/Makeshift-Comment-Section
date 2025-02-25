@@ -1,4 +1,4 @@
-@keyframes entrance{
+@keyframes everything-entrance{
   0%{
     transform: translateX(-100px);
     opacity: 0;
@@ -9,14 +9,28 @@
   }
 }
 
+@keyframes comment-entrance{
+  0%{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 100;
+  }
+}
+
 html{
   font-family: Arial;
+  width: 100vw;
 }
 
 #everything-container{
   margin: 5vh auto 5vh auto;
   
-  animation-name: entrance;
+  width: fit-content;
+  
+  animation-name: everything-entrance;
   animation-duration: 0.3s;
   animation-direction: normal;
 }
@@ -24,6 +38,7 @@ html{
 fieldset{
   display: flex;
   flex-direction: column;
+  width: fit-content;
   gap: 20px;
   border-style: none;
   border-bottom-style: solid;
@@ -69,8 +84,17 @@ button:active{
 }
 
 article{
-  padding: 0px 20px;
+
   border-bottom-style: solid;
   border-bottom-color: gray;
   border-bottom-width: 1px;
+  
+  animation-name: comment-entrance;
+  animation-duration: 0.2s;
+  animation-direction: normal;
+}
+
+article p{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
