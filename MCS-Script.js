@@ -37,6 +37,8 @@ function addComment()
     userName.value = "";
     userComment.value = "";
     
+    
+    //Makes sure that the set width of these elements does not go beyond the width of the others, making the text break when the limit is reached
     newComment.style.maxWidth = String(maxCommentWidth) + "px";
     usernameForComment.style.maxWidth = String(maxCommentWidth) + "px";
     console.log(newComment.style.maxWidth);

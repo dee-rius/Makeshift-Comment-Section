@@ -84,7 +84,6 @@ button:active{
 }
 
 article{
-
   border-bottom-style: solid;
   border-bottom-color: gray;
   border-bottom-width: 1px;
@@ -96,5 +95,4 @@ article{
 
 article p{
   word-wrap: break-word;
-  overflow-wrap: break-word;
 }
